@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="menu-inicial" id="menuInicial">
+    <h2>Cargar Imágenes del DNI</h2>
+    <label for="frontImage">Cargar Imagen del Frente</label>
+    <input type="file" id="frontImage" accept="image/*">
+    
+    <label for="backImage">Cargar Imagen del Reverso</label>
+    <input type="file" id="backImage" accept="image/*">
+    
+    <button id="btnFullscreen">Ver en Pantalla Completa</button>
+</div>
+
+<div class="app-container" id="appContainer" style="display:none;">
+    <header class="app-header">
+        <h1>Dni Digital</h1>
+        <button class="refresh-btn">&#x21bb;</button>
+    </header>
+
+    <div class="content">
+        <div class="card-container">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="card">
+                        <div class="card-front">
+                            <img id="frenteDNI" src="" alt="Frente">
+                        </div>
+                        <div class="card-back">
+                            <img id="reversoDNI" src="" alt="Reverso">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="update-info">
+            Última actualización 09/09/2024 20:04 hs
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <span class="icon"><img src="Assets/ojo.jpg" alt="Ver Detalle"></span>
+                <span>Ver detalle</span>
+            </div>
+            <div class="option">
+                <span class="icon"><img src="Assets/Cruz.jpg" alt="Desactivar DNI"></span>
+                <span>Desactivar DNI</span>
+            </div>
+        </div>
+
+        <div class="qr-option">
+            <span class="icon"><img src="Assets/qr.jpg" alt="Verifica Código QR"></span>
+            <span>Verifica código QR</span>
+            <span class="arrow">&#9662;</span>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <div class="footer-item"><img id="inicio" src="Assets/Inicio.jpg" alt="Inicio"></div>
+        <div class="footer-item"><img id="novedades" src="Assets/Novedades.jpg" alt="Novedades"></div>
+        <div class="footer-item"><img id="telefonos" src="Assets/Telefonos.jpg" alt="Teléfonos"></div>
+        <div class="footer-item"><img id="tina" src="Assets/Tina.jpg" alt="Tina"></div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

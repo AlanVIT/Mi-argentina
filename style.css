@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-inicial h2 {
+    margin-bottom: 20px;
+}
+
+.menu-inicial input {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.menu-inicial button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-inicial button:hover {
+    background-color: #0056b3;
+}
+
+.app-container {
+    width: 412px;
+    height: 915px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.app-header h1 {
+    font-size: 18px;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-container {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.carousel-container {
+    perspective: 1000px;
+}
+
+.carousel {
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+}
+
+.card-back {
+    background-color: #ffcc00;
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.update-info {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.option .icon {
+    margin-right: 5px;
+}
+
+.qr-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.qr-option .icon {
+    margin-right: 5px;
+}
+
+.qr-option .arrow {
+    margin-left: 5px;
+}
+
+.app-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 0;
+    margin-top: 100%;
+}
+
+.footer-item {
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+.gray-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out; /* Ajustamos la transición */
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    transform: rotateY(180deg); /* El reverso estará rotado 180 grados */
+}
+
+/* Clase que permite el giro */
+.rotate {
+    transform: rotateY(180deg);
+}
